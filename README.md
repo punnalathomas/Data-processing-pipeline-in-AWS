@@ -35,11 +35,11 @@ aws_session_token=YOUR_SESSION_TOKEN
 ## Deploy
 
 Clone the repository and go to the procject directory.  
-`git clone <repository url>`
-`cd Data-processing-pipeline-in-AWS`
-`terraform init`
-`terraform plan`
-`terraform apply`
+`git clone <repository url>`  
+`cd Data-processing-pipeline-in-AWS`  
+`terraform init`  
+`terraform plan`  
+`terraform apply`  
 
 Terraform will create the ZIP package automatically from:  
 lambda/lambda_function.py  
