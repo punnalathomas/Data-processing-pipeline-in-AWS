@@ -11,7 +11,7 @@ When a text file is uploaded to the input bucket, the Lambda function is trigger
 
 ## Prerequisites
 
-- Linux OS
+- Linux OS (tested in Debian Trixie)  
 - AWS account or AWS Learner Lab access
 - AWS CLI installed
 - Terraform installed
@@ -66,7 +66,7 @@ To remove all created resources:
 `terraform destroy`  
 
 ## Known limitations
-- This project was tested in AWS Learner Lab.
+- This project was tested in AWS Learner Lab.  
 - Existing IAM role (LabRole) is used because the learner lab did not allow creating a custom IAM role.
 - Lambda function processes text files only.
 
