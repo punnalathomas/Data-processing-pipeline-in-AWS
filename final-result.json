@@ -1,7 +1,0 @@
-{
-  "source_bucket": "file-pipeline-input-992382537650",
-  "source_key": "final-test.txt",
-  "line_count": 2,
-  "word_count": 8,
-  "processed_at": "2026-03-28T15:29:57.744819"
-}
