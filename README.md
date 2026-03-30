@@ -67,7 +67,9 @@ hmod +x test_pipeline.sh
 
 ## Cleanup
 To remove all created resources:  
-`terraform destroy`  
+```
+terraform destroy
+```  
 
 ## Known limitations
 - This project was tested in AWS Learner Lab.  
