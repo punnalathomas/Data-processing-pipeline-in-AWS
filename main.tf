@@ -1,11 +1,19 @@
 resource "aws_s3_bucket" "input" {
   bucket = "file-pipeline-input-${data.aws_caller_identity.current.account_id}"
-  force_destroy = True
+  force_destroy = true
+}
+
+output "input_bucket_name" {
+  value = aws_s3_bucket.input.bucket
 }
 
 resource "aws_s3_bucket" "output" {
   bucket = "file-pipeline-output-${data.aws_caller_identity.current.account_id}"
-  force_destroy = True
+  force_destroy = true
+}
+
+output "output_bucket_name" {
+  value = aws_s3_bucket.output.bucket
 }
 
 data "aws_iam_role" "labrole" {
