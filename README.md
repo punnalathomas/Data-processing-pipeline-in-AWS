@@ -59,7 +59,7 @@ This is done with the `archive_file` data source during deployment.
 Inside of the local repository.  
 
 ```
-hmod +x test_pipeline.sh
+chmod +x test_pipeline.sh
 ```  
 ```
 ./test_pipeline.sh
