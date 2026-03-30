@@ -46,20 +46,10 @@ lambda/lambda_function.py
 This is done with the `archive_file` data source during deployment.  
 
 ## How to test it
-Create sample file:  
+Inside of the local repository.  
 
-`echo -e "this is test\nthis is the second line" > test.txt`  
-
-Upload file to the input bucket:  
-
-`aws s3 cp test.txt s3://file-pipeline-input-ACCOUNT_ID/ --profile default`  
-
-#see that the --profile matches the profile name set in credentials section.  
-
-Download and inspect the result from the output bucket:  
-
-`aws s3 cp s3://file-pipeline-output-ACCOUNT_ID/processed/test.txt.json result.json --profile default
-cat result.json`  
+`chmod +x test_pipeline.sh`  
+`./test_pipeline.sh`  
 
 ## Cleanup
 To remove all created resources:  
