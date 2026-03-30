@@ -36,7 +36,9 @@ aws_session_token=YOUR_SESSION_TOKEN
 
 Clone the repository and go to the procject directory.  
 `git clone <repository url>`  
-``cd Data-processing-pipeline-in-AWS``  
+```
+cd Data-processing-pipeline-in-AWS
+```  
 ```terraform init```  
 ```terraform plan```  
 ```terraform apply```  
