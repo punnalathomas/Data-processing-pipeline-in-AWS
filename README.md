@@ -23,7 +23,9 @@ AWS credentials are not stored in this repository.
 
 Configure credentials locally using the AWS shared credentials file:
 
-`~/.aws/credentials`
+```
+nano ~/.aws/credentials
+```
 
 Example:
 
@@ -39,9 +41,15 @@ Clone the repository and go to the procject directory.
 ```
 cd Data-processing-pipeline-in-AWS
 ```  
-```terraform init```  
-```terraform plan```  
-```terraform apply```  
+```
+terraform init
+```  
+```
+terraform plan
+```  
+```
+terraform apply
+```  
 
 Terraform will create the ZIP package automatically from:  
 lambda/lambda_function.py  
@@ -50,8 +58,12 @@ This is done with the `archive_file` data source during deployment.
 ## How to test it
 Inside of the local repository.  
 
-```chmod +x test_pipeline.sh```  
-```./test_pipeline.sh```  
+```
+hmod +x test_pipeline.sh
+```  
+```
+./test_pipeline.sh
+```  
 
 ## Cleanup
 To remove all created resources:  
