@@ -6,8 +6,9 @@ Architecture:
 - AWS Lambda function.
 - S3 output bucket.
 - S3 event notification.
+- Lifecycle policy for processed files.
 
-When a text file is uploaded to the input bucket, the Lambda function is triggered automatically. It reads the file, counts the number of lines and words, and stores the result as a JSON file in the output bucket.  
+When a text file is uploaded to the input bucket, the Lambda function is triggered automatically. It reads the file, counts the number of lines and words, and stores the result as a JSON file in the output bucket.  After 30 days processed files are transfered to the Glacier class storage and after 120 days files are deleted completly.  
 
 ## Prerequisites
 
@@ -75,4 +76,6 @@ terraform destroy
 - This project was tested in AWS Learner Lab.  
 - Existing IAM role (LabRole) is used because the learner lab did not allow creating a custom IAM role.
 - Lambda function processes text files only.
+- AWS does not tranfer files under the size of 128 KB with lifecycle policy.
+- Expiration deletation will be applied after 120 days.
 
