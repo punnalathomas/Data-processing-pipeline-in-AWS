@@ -60,3 +60,25 @@ resource "aws_s3_bucket_notification" "input_notification" {
 
   depends_on = [aws_lambda_permission.allow_s3_invoke]
 }
+
+resource "aws_s3_bucket_lifecycle_configuration" "output_lifecycle" {
+  bucket = aws_s3_bucket.output.id
+
+  rule {
+    id     = "archive-and-expire-processed-files"
+    status = "Enabled"
+
+    filter {
+      prefix = "processed/"
+    }
+
+    transition {
+      days          = 30
+      storage_class = "GLACIER"
+    }
+
+    expiration {
+      days = 120
+    }
+  }
+}
